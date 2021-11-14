@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.d.ts",
   "scripts": {
-    "test": "tsc",
     "dtslint": "dtslint types"
   },
   "repository": {
