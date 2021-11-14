@@ -1,6 +1,6 @@
 {
   "name": "common-types",
-  "version": "latest",
+  "version": "0.1.0",
   "description": "",
   "main": "index.d.ts",
   "scripts": {
