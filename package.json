@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.d.ts",
   "scripts": {
-    "dtslint": "dtslint types"
+    "dtslint": "dtslint"
   },
   "repository": {
     "type": "git",
