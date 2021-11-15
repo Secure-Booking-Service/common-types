@@ -37,7 +37,7 @@ export interface Booking {
   from: string;
 
   /** destination airport */
-  to: string
+  to: string;
 
   /** unique number that identifies the booking */
   number: string;
