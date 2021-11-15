@@ -33,6 +33,12 @@ export interface CreditCard {
  * Interface of a booking
  */
 export interface Booking {
+  /** airport of departure */
+  from: string;
+
+  /** destination airport */
+  to: string
+
   /** unique number that identifies the booking */
   number: string;
 
