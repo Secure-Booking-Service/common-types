@@ -21,8 +21,8 @@ jobs:
       - name: Delete old package, if available
         continue-on-error: true
         uses: actions/delete-package-versions@v1
-          with:
-            package-name: "@${{ github.repository }}" 
+        with:
+          package-name: "@${{ github.repository }}" 
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
