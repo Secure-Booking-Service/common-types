@@ -18,11 +18,7 @@ jobs:
           scope: "@${{ github.repository_owner }}"
       - run: npm install
       - run: npm run dtslint
-      - name: Delete old package, if available
-        continue-on-error: true
-        uses: actions/delete-package-versions@v1
-        with:
-          package-name: "@${{ github.repository }}" 
+      - run: npm version minor
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
