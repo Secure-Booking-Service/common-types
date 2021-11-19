@@ -20,7 +20,7 @@ jobs:
           scope: "@${{ github.repository_owner }}"
       - run: npm install
       - run: npm run dtslint
-      - run: npm version minor
+      - run: npm version minor --no-git-tag-version
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
