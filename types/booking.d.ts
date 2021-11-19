@@ -8,8 +8,8 @@ export interface Passenger {
   /** last name of passenger */
   lastName: string;
 
-  /** birthrate of passenger */
-  birthrate: string;
+  /** birthday of passenger */
+  dateOfBirth: string;
 
   /** gender of passenger */
   gender: string;
