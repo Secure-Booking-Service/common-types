@@ -1,3 +1,5 @@
+import { FlightOffer } from "./flights";
+
 /**
  * Interface of a passenger
  */
@@ -48,6 +50,6 @@ export interface Booking {
   /** credit card used for booking */
   creditCard: CreditCard;
 
-  /** flights for booking */
-  flights: any[];
+  /** flight offer for booking */
+  flightOffer: FlightOffer;
 }
