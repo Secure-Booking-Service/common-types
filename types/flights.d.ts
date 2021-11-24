@@ -2,9 +2,6 @@
  * Interface of a flight offer
  */
 export interface FlightOffer {
-    /** airport of departure */
-    id: string;
-
     /** number of bookable seats */
     numberOfBookableSeats: number;
 
