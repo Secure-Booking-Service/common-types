@@ -10,18 +10,29 @@ jobs:
   build:
     runs-on: ubuntu-latest 
     permissions: 
-      contents: read
+      contents: write
       packages: write 
     steps:
       - uses: actions/checkout@v2
+      - name: Set git configuration
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
       - uses: actions/setup-node@v2
         with:
           node-version: '16.x'
+          cache: 'npm'
           registry-url: 'https://npm.pkg.github.com'
           scope: "@${{ github.repository_owner }}"
+      - name: Cache /home/runner/.dts/typescript-installs
+        uses: actions/cache@v2
+        with:
+          path: /home/runner/.dts/typescript-installs
+          key: ${{ runner.os }}-dtslint-typescript-installs
       - run: npm install
       - run: npm run dtslint
-      - run: npm version minor --no-git-tag-version
+      - run: npm version minor
+      - run: git push
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
