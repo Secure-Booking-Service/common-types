@@ -1,9 +1,9 @@
 name: CD
 on:
   push:
-    branches: [ main ]
-    paths:
-      - '**.ts'
+    branches: [ main, 'tjarbo/CD-fix' ]
+#    paths:
+#      - '**.ts'
   workflow_dispatch:
 
 jobs:
@@ -14,6 +14,10 @@ jobs:
       packages: write 
     steps:
       - uses: actions/checkout@v2
+      - name: Prepare git
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
       - uses: actions/setup-node@v2
         with:
           node-version: '16.x'
@@ -21,8 +25,12 @@ jobs:
           scope: "@${{ github.repository_owner }}"
       - run: npm install
       - run: npm run dtslint
-      - run: npm version minor --no-git-tag-version
-      - run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - run: npm version minor
+      - name: Commit new version 
+        run: |
+          git commit -am "🔖 Released new version"
+          git push
+#      - run: npm publish
+#        env:
+#          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           
