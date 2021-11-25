@@ -1,9 +1,9 @@
 name: CD
 on:
   push:
-    branches: [ main, 'tjarbo/CD-fix' ]
-#    paths:
-#      - '**.ts'
+    branches: [ main ]
+    paths:
+      - '**.ts'
   workflow_dispatch:
 
 jobs:
@@ -21,6 +21,7 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '16.x'
+          cache: 'npm'
           registry-url: 'https://npm.pkg.github.com'
           scope: "@${{ github.repository_owner }}"
       - name: Cache /home/runner/.dts/typescript-installs
@@ -32,7 +33,7 @@ jobs:
       - run: npm run dtslint
       - run: npm version minor
       - run: git push
-#      - run: npm publish
-#        env:
-#          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           
