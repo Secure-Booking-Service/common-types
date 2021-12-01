@@ -34,7 +34,7 @@ export interface CreditCard {
 /**
  * Interface of a booking
  */
-export interface Booking {
+export interface BookingDraft {
   /** list of all passengers */
   passengers: Passenger[];
 
@@ -48,7 +48,7 @@ export interface Booking {
 /**
  * Interface of a booking returned from the database
  */
-export interface DatabaseBooking extends Booking {
+export interface Booking extends BookingDraft {
   /** unique number that identifies the booking */
   id: string;
 
