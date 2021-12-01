@@ -32,7 +32,7 @@ export interface CreditCard {
 }
 
 /**
- * Interface of a booking
+ * Interface of a booking draft
  */
 export interface BookingDraft {
   /** list of all passengers */
@@ -46,7 +46,7 @@ export interface BookingDraft {
 }
 
 /**
- * Interface of a booking returned from the database
+ * Interface of a booking
  */
 export interface Booking extends BookingDraft {
   /** unique number that identifies the booking */
