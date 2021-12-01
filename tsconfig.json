@@ -8,9 +8,7 @@
     "noImplicitThis": true,
     "strictFunctionTypes": true,
     "strictNullChecks": true,
-    "types": [
-      "node"
-    ],
+    "types": [],
     "forceConsistentCasingInFileNames": true,
     "baseUrl": ".",
     "outDir": ".",
@@ -21,10 +19,10 @@
     },
     "typeRoots": [
       "node_modules/@types"
-    ],
+    ]
   },
   "include": [
-    "**/*.ts",
+    "**/*.ts"
   ],
   "exclude": [
     "node_modules",
