@@ -32,18 +32,9 @@ export interface CreditCard {
 }
 
 /**
- * Interface of a booking
+ * Interface of a booking draft
  */
-export interface Booking {
-  /** airport of departure */
-  from: string;
-
-  /** destination airport */
-  to: string;
-
-  /** unique number that identifies the booking */
-  number: string;
-
+export interface BookingDraft {
   /** list of all passengers */
   passengers: Passenger[];
 
@@ -52,4 +43,24 @@ export interface Booking {
 
   /** flight offer for booking */
   flightOffer: FlightOffer;
+}
+
+/**
+ * Interface of a booking
+ */
+export interface Booking extends BookingDraft {
+  /** unique number that identifies the booking */
+  id: string;
+
+  /** email of the user that created the booking */
+  createdBy: string;
+
+  /** time when the booking was created */
+  createdAt: string;
+
+  /** airport of departure */
+  from: string;
+
+  /** destination airport */
+  to: string;
 }
