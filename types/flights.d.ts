@@ -24,13 +24,17 @@ export interface FlightOffer {
 export interface Flight {
     /** airport of departure */
     departure: {
+        /** 3 uppercase letters for the departure airport */
         iataCode: string;
+        /** departure time */
         at: string;
     };
 
     /** airport of arrival */
     arrival: {
+        /** 3 uppercase letters for the arriving airport */
         iataCode: string;
+        /** arrival time */
         at: string;
     };
 
