@@ -1,15 +1,33 @@
-
 {
   "compilerOptions": {
-      "module": "commonjs",
-      "lib": ["es6"],
-      "noImplicitAny": true,
-      "noImplicitThis": true,
-      "strictFunctionTypes": true,
-      "strictNullChecks": true,
-      "types": [],
-      "noEmit": true,
-      "forceConsistentCasingInFileNames": true,
-      "baseUrl": "."
-  }
+    "module": "commonjs",
+    "lib": [
+      "es6"
+    ],
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "strictFunctionTypes": true,
+    "strictNullChecks": true,
+    "types": [
+      "node"
+    ],
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": ".",
+    "outDir": ".",
+    "paths": {
+      "*": [
+        "node_modules/*"
+      ]
+    },
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+  },
+  "include": [
+    "**/*.ts",
+  ],
+  "exclude": [
+    "node_modules",
+    "**/*.d.ts"
+  ]
 }
