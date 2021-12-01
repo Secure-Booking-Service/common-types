@@ -48,7 +48,7 @@ export interface Booking {
 /**
  * Interface of a booking returned from the database
  */
- export interface DatabaseBooking extends Booking {
+export interface DatabaseBooking extends Booking {
   /** unique number that identifies the booking */
   id: string;
 
