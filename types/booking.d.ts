@@ -53,7 +53,7 @@ export interface Booking extends BookingDraft {
   id: string;
 
   /** email of the user that created the booking */
-  user: string;
+  createdBy: string;
 
   /** time when the booking was created */
   createdAt: string;
