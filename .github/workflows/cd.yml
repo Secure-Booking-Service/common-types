@@ -42,4 +42,4 @@ jobs:
           registry: 'https://registry.npmjs.org/'
           access: 'public'
           token: ${{ secrets.NPM_TOKEN }}
-          
+          check-version: false
