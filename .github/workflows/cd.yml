@@ -32,7 +32,14 @@ jobs:
       - run: npm run dtslint
       - run: npm version minor
       - run: git push
-      - run: npm publish
+      - name: Publish to GitHub npm registry
+        run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Publish to public npm registry
+        uses: JS-DevTools/npm-publish@v1 
+        with:
+          registry: 'https://registry.npmjs.org/'
+          access: 'public'
+          token: ${{ secrets.NPM_TOKEN }}
           
