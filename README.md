@@ -1,4 +1,13 @@
-## Common Types
+<div align="center">
+    <img src="https://raw.githubusercontent.com/Secure-Booking-Service/common-types/main/logo.svg" alt="Share Icon by Bootstrap" width="100">
+    <br>
+    <h2>Secure Booking Service - Common Types</h2>
+    <br>
+</div>
+
+[![CI](https://github.com/Secure-Booking-Service/common-types/actions/workflows/ci.yml/badge.svg)](https://github.com/Secure-Booking-Service/common-types/actions/workflows/ci.yml)
+[![CD](https://github.com/Secure-Booking-Service/common-types/actions/workflows/cd.yml/badge.svg)](https://github.com/Secure-Booking-Service/common-types/actions/workflows/cd.yml)
+
 This package includes typescript type definitions used by the frontend and backend application. It is published at GitHub's NPM registry. 
 
 https://github.com/Secure-Booking-Service/common-types/packages/1096992
@@ -21,3 +30,8 @@ Afterwards, tell NPM to download *Secure Booking Service* packages from GitHub. 
 ```
 
 Now you are ready to install the package with `npm install --save-dev @secure-booking-service/common-types`
+
+---
+<div align="left">
+    Icon by <a href="https://github.com/twbs/icons">Bootstrap</a> published under <a href="https://github.com/twbs/icons/blob/main/LICENSE.md">MIT licence</a>.
+</div>
