@@ -5,10 +5,11 @@
     <br>
 </div>
 
+[![Badge](https://img.shields.io/badge/project-Secure%20Booking%20Service-blue)](https://github.com/Secure-Booking)
 [![CI](https://github.com/Secure-Booking-Service/common-types/actions/workflows/ci.yml/badge.svg)](https://github.com/Secure-Booking-Service/common-types/actions/workflows/ci.yml)
 [![CD](https://github.com/Secure-Booking-Service/common-types/actions/workflows/cd.yml/badge.svg)](https://github.com/Secure-Booking-Service/common-types/actions/workflows/cd.yml)
 
-This package includes typescript type definitions used by the frontend and backend application. It is published at GitHub's NPM registry. 
+This package includes typescript type definitions and code used by the [frontend](https://github.com/Secure-Booking-Service/frontend) and [backend](https://github.com/Secure-Booking-Service/backend) application. It is published at GitHub's NPM registry. 
 
 https://github.com/Secure-Booking-Service/common-types/packages/1096992
 
